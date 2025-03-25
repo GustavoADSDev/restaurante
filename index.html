@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Gourmet</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Restaurante Gourmet</a></h1>
+    </header> 
+    
+    <main>
+        <section id="sobre">
+            <h1>Sobre nós</h1>
+            <p>Bem-vindo ao <strong>Restaurante Gourmet</strong>, onde cada prato é uma experiência única. Nossa missão é oferecer uma experiência gastronômica inesquecível, combinando ingredientes frescos e técnicas culinárias refinadas.</p>
+        </section>
+
+        <section id="menu">
+           
+       
+        <section id="chefes">
+            <h1>Nossos Chefes</h1>
+            <p>
+                👩‍🍳 Chef Maria - Expert em doces finos <br>
+                👨‍🍳 Chef Roberto - Mestre em cortes nobres <br>
+                👨‍🍳 Chef Carlos - Especialista em culinária italiana <br>
+            </p>
+        </section>
+        
+        <section id="reserva">
+            <h1>Faça sua Reserva</h1>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu Email" required>
+                <input type="date" required>
+                <input type="number" placeholder="Número de Pessoas" required>
+                <input type="text" placeholder="Comentários adicionais">
+                <button type="submit" class="botao-reservar" id="bnt-reservar" onclick="clicar(event)">Reserva</button>
+                <p id="mensagem-reserva"></p>
+            </form>
+        </section>
+
+        <section id="eventos">
+            <h1>Eventos Especiais</h1>
+            <p>Oferecemos espaço para eventos privados e jantares especiais. Entre em contato para mais informações!</p>
+        </section>
+    
+        <section id="contato">
+            <h1>Contato</h1>
+            <p>
+                📞 Telefone: (11) 1234-5678<br>
+                ✉️ Email: contato@restaurantegourmet.com <br>
+                📍 Endereço: Rua dos Sabores, 123 - São Paulo
+            </p>
+            <p>🕒 <strong>Horário de Funcionamento: Segunda a Domingo, das 12h às 23h</strong></p>
+        </section>
+    </main>
+
+    
+    <!-- Menu lateral -->
+    <div class="container">
+        <label for="menu-recolhivel" class="menu-btn">☰</label>
+        <input type="checkbox" id="menu-recolhivel">
+        <div class="menu">
+            <label for="menu-recolhivel" class="fechar-menu">X</label>
+            <ul>
+                <li><a href="index.html">HOME</a></li>          
+                <li><a href="historia.html">HISTÓRIA</a></li>
+                <li><a href="menu-cardapio.html">CARDÁPIO</a></li>
+                <li><a href="#">TRABALHE CONOSCO</a></li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - Restaurante Gourmet | Todos os direitos reservados</p>
+    </footer>
+    <script>
+        function clicar(event) {
+            event.preventDefault(); // Evita que o formulário seja enviado
+            
+           
+        }
+        
+    </script>
+</body>
+</html>

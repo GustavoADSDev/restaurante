@@ -1,0 +1,126 @@
+@charset "UTF-8"
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+
+
+
+*{
+    margin: 0px;
+    border: 0px;
+}
+body{
+    background-color: #f6f2e9;
+}
+header{
+    background-color: #5c5c5c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header>h1>a{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    text-align: center;
+    margin: 30px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+}
+p{
+    text-align: center;
+    font-size: 19px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 10px;
+}
+input{
+    border: 3x solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+   flex: ;
+}
+
+
+
+.botao-reservar{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/*menu abaixo*/
+
+#menu-recolhivel {
+    display: none;
+}
+
+/* Botão de abrir (fixo na tela) */
+.menu-btn{
+    position: fixed; /* Fixa o botão na tela */
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #222;
+    z-index: 9999; /* Mantém sempre acima */
+}
+
+/* Menu lateral */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -290px;
+    width: 250px;
+    height: 100vh;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu li {
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Botão de fechar */
+.fechar-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+/* Mostrar o menu quando o checkbox estiver marcado */
+#menu-recolhivel:checked + .menu {
+    left: 0;
+}
+/*menu acima*/
+footer{
+    margin: 20px;
+}
