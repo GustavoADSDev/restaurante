@@ -109,12 +109,13 @@ p{
 #foto-historia{
     display: flex;
     justify-content: center;
-}
-.container {
+}    
+    .container {
     display: flex;
     justify-content: center; 
     width: 100%; 
     padding: 20px 0;
+    flex-wrap: wrap;
 }
 
 .container input {
@@ -123,10 +124,22 @@ p{
     border-radius: 10px;
     padding: 7px;
     margin: 0 10px; 
-    width: 90px;
     font-size: 15px;
     font-weight: bolder;
+    flex-grow: 1; 
+    min-width: 80px; 
+    box-sizing: border-box; 
    
+}
+a>input:hover{
+    background-color: #deb27e;
+}
+    @media (max-width: 680px) {
+  
+    .container input {
+        width: 95%; /* Inputs ocupam quase toda a largura em telas pequenas */
+        margin: 3px ; /* Margem vertical entre os inputs */
+    }
 }
 a>input:hover{
     background-color: #deb27e;
