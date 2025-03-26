@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0px;
+    border: 0px;
+}
+
+body{
+    background-color: #f1e8d3;
+}
+header{
+    background-color: #5c5c5c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    
+} 
+header>h1>a{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+}
+h2{
+    text-align: center;
+    margin: 10px;
+}
+
+p{
+    font-family: 'Lora', serif;
+    font-size: 21px;
+    line-height: 1.6;
+    color: #666666;
+    margin: 10px;
+    text-align: center;
+}
+#menu-recolhivel {
+    display: none;
+}
+
+/* Botão de abrir (fixo na tela) */
+.menu-btn {
+    position: fixed; /* Fixa o botão na tela */
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #222;
+    z-index: 9999; /* Mantém sempre acima */
+}
+
+/* Menu lateral */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -290px;
+    width: 250px;
+    height: 100vh;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu li {
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Botão de fechar */
+.fechar-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mostrar o menu quando o checkbox estiver marcado */
+#menu-recolhivel:checked + .menu {
+    left: 0;
+}
+#foto-historia{
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+    padding: 20px 0;
+}
+
+.container input {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 0 10px; 
+    width: 90px;
+    font-size: 15px;
+    font-weight: bolder;
+   
+}
+a>input:hover{
+    background-color: #deb27e;
+}
+    @media (max-width: 668px) {
+  
+    .container input {
+        width: 95%; /* Inputs ocupam quase toda a largura em telas pequenas */
+        margin: 10px ; /* Margem vertical entre os inputs */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <label for="menu-recolhivel" class="menu-btn">☰</label>
+
+    <!-- Checkbox escondido -->
+    <input type="checkbox" id="menu-recolhivel">
+    
+    <!-- Menu lateral -->
+    <div class="menu">
+        <label for="menu-recolhivel" class="fechar-menu">X</label>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="historia.html">HISTÓRIA</a></li>
+            <li><a href="menu-cardapio.html">CARDÁPIO</a></li>
+            <li><a href="#">TRABALHE CONOSCO</a></li>
+        </ul>
+    </div>
+    
+        </div>
+
+     <header>
+        <h1><a href="index.html">Restaurante Gourmet</a></h1>
+    </header>
+    <h2>A História do Restaurante Gourmet</h2>
+
+    <p>O cardápio do Restaurante Gourmet é uma celebração da culinária global, cuidadosamente entrelaçada com a riqueza dos ingredientes frescos e sazonais da região. Cada prato é uma sinfonia de sabores, texturas e aromas, concebido para encantar os paladares mais exigentes e proporcionar uma experiência gastronômica memorável.</p>
+       
+        <picture id="foto-historia">
+                <source media="(max-width: 950px)" srcset="restaurante/historia/2002.jpg" width="95%">
+                <img src="restaurante/historia/2002.jpg" alt="" width=40%" >
+        </picture>
+    
+
+     <p>As entradas, leves e convidativas, abrem o apetite com opções como o carpaccio de salmão marinado em cítricos e ervas frescas, ou a bruschetta de tomate cereja e manjericão, com um toque de azeite extra virgem. Os risotos, cremosos e reconfortantes, são preparados com arroz arbóreo italiano e ingredientes nobres, como o risoto de funghi porcini com lascas de parmesão, ou o risoto de frutos do mar, com camarões, lulas e mexilhões frescos.</p>
+
+     <div class="container">
+         <a href="1980.html" ><input type="button" value="1980"</a>
+         <a href="2002.html" ><input type="button" value="2002" ></a>
+         <a href="2012.html" ><input type="button" value="2012" ></a>
+         <a href="2015.html" ><input type="button" value="2015" ></a>
+         <a href="2020.html" ><input type="button" value="2020" ></a>
+         <a href="2025.html" ><input type="button" value="2025" ></a>
+     </div>
+
+
+</body>
+</html>

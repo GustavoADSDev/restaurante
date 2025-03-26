@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            border: 0px;
+        }
+        
+        body{
+            background-color: #f1e8d3;
+        }
+        header{
+            background-color: #5c5c5c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            
+        } 
+        header>h1>a{
+            text-decoration: none;
+            color: white;
+        }
+        h1{
+            text-align: center;
+            margin: 10px;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 36px;
+        }
+        h2{
+            text-align: center;
+            margin: 10px;
+        }
+        
+        p{
+            font-family: 'Lora', serif;
+            font-size: 21px;
+            line-height: 1.6;
+            color: #666666;
+            margin: 10px;
+            text-align: center;
+        }
+        #menu-recolhivel {
+            display: none;
+        }
+        
+        /* Botão de abrir (fixo na tela) */
+        .menu-btn {
+            position: fixed; /* Fixa o botão na tela */
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #222;
+            z-index: 9999; /* Mantém sempre acima */
+        }
+        
+        /* Menu lateral */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: -290px;
+            width: 250px;
+            height: 100vh;
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            transition: left 0.3s ease-in-out;
+        }
+        
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        
+        .menu li {
+            padding: 15px 0;
+            border-bottom: 1px solid #444;
+        }
+        
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        
+        /* Botão de fechar */
+        .fechar-menu {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 25px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        /* Mostrar o menu quando o checkbox estiver marcado */
+        #menu-recolhivel:checked + .menu {
+            left: 0;
+        }
+        #foto-historia{
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center; 
+            width: 100%; 
+            padding: 20px 0;
+        }
+        
+        .container input {
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            padding: 7px;
+            margin: 0 10px; 
+            width: 90px;
+            font-size: 15px;
+            font-weight: bolder;
+           
+        }
+        a>input:hover{
+            background-color: #deb27e;
+        }
+            @media (max-width: 668px) {
+          
+            .container input {
+                width: 95%; /* Inputs ocupam quase toda a largura em telas pequenas */
+                margin: 10px ; /* Margem vertical entre os inputs */
+            }
+        }
+        
+        
+            </style>
+</head>
+<body>
+    <label for="menu-recolhivel" class="menu-btn">☰</label>
+
+    <!-- Checkbox escondido -->
+    <input type="checkbox" id="menu-recolhivel">
+    
+    <!-- Menu lateral -->
+    <div class="menu">
+        <label for="menu-recolhivel" class="fechar-menu">X</label>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="1980.html">HISTÓRIA</a></li>
+            <li><a href="menu-cardapio.html">CARDÁPIO</a></li>
+            <li><a href="#">TRABALHE CONOSCO</a></li>
+        </ul>
+    </div>
+    
+        </div>
+
+     <header>
+        <h1><a href="index.html">Restaurante Gourmet</a></h1>
+    </header>
+    <h2>A História do Restaurante Gourmet</h2>
+
+    
+        <p>Em 2020, o Restaurante Gourmet, já consagrado como um ícone da gastronomia local e regional, continuou a brilhar como um farol de sabor e sofisticação. Turistas e críticos gastronômicos, vindos de todos os cantos do mundo, convergiram para este oásis culinário, atraídos pela promessa de uma experiência gastronômica inigualável. A dedicação incansável de Eduardo, o mestre dos sabores, e Clara, a arquiteta da hospitalidade, em oferecer qualidade e excelência em cada detalhe, desde a seleção dos ingredientes até o último toque na decoração, continuou a render prêmios e reconhecimento, consolidando o restaurante como um ponto de referência na cidade.</p>
+           
+            <picture id="foto-historia">
+                    <source media="(max-width: 950px)" srcset="restaurante/historia/2020.jpg"width="95%">
+                    <img src="restaurante/historia/2020.jpg" alt="" width=40%" >
+            </picture>
+        
+    
+         <p>Apesar dos desafios impostos pelo ano de 2020, o Restaurante Gourmet não se deixou abalar. Com resiliência e criatividade, adaptou-se às novas tendências e incorporou técnicas inovadoras, como o delivery de alta gastronomia e a criação de experiências virtuais de degustação, sem jamais abrir mão de sua essência: a combinação perfeita entre sabor, elegância e hospitalidade. O restaurante continuou a ser um lugar onde cada refeição conta uma história, onde os ingredientes frescos e locais se transformam em obras de arte culinárias, e onde cada visitante, seja presencial ou virtual, sai com o desejo de voltar, de reviver a magia e de se deliciar com os sabores que despertam os sentidos e alimentam a alma.</p>
+    
+        
+
+     <div class="container">
+         <a href="1980.html" ><input type="button" value="1980"</a>
+         <a href="2002.html" ><input type="button" value="2002" ></a>
+         <a href="2012.html" ><input type="button" value="2012" ></a>
+         <a href="2015.html" ><input type="button" value="2015" ></a>
+         <a href="2020.html" ><input type="button" value="2020" ></a>
+         <a href="2025.html" ><input type="button" value="2025" ></a>
+     </div>
+</body>
+</html>
