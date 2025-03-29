@@ -173,11 +173,12 @@ p {
 
 /* Estilos da navegação manual */
 .manual-navigation {
-  position: absolute;
-  width: 800px;
+  position: fixed;
+   width: 800px;
   margin: -40px;
   display: flex;
   justify-content: center;
+  
 }
 
 .manual-btn {
@@ -186,15 +187,20 @@ p {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.9s;
+  
+ 
 }
 
 .manual-btn:not(:last-child) {
   margin-right: 40px;
+  
 }
 
 .manual-btn:hover {
   background-color: white;
+  
 }
+
 
 /* Estilos para o slide ativo (com base no radio button marcado) */
 #radio1:checked ~ .first {
@@ -266,7 +272,9 @@ p {
 
 @media (max-width: 768px) {
   .slider {
-      width: 90%;
+      width: 99%;
+    
+     
   }
 
   .manual-navigation {
