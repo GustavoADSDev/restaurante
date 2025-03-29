@@ -7,31 +7,55 @@
     <link rel="stylesheet" href="style.cardapio.css">
 </head>
 <body>
-    <div class="slider"> 
+    <header>
+        <h1><a href="index.html">Restaurante Gourmet</a></h1>
+    </header>
 
+    <h1 id="cardapio">CARDÁPIO</h1>
+
+    <div class="menu-comida">
+        <a href="#"><input type="button" value="RODÍZIO" class="menu1 menu-selecionado" id="rodizioBtn"></a>
+        <a href="#"><input type="button" value="BUFFET" class="menu2" id="buffetBtn"></a>
+        <a href="#"><input type="button" value="BEBIDAS" class="menu3" id="drinksBtn"></a>
+        <a href="#"><input type="button" value="DRINKS" class="menu4" id="bebidasBtn"></a>
+    </div>
+
+    <p>Cortes nobres e tradicionais, espaço oriental e buffet completo para você ativar o modo Gourmet</p>
+    <label for="menu-recolhivel" class="menu-btn">☰</label>
+
+    <input type="checkbox" id="menu-recolhivel">
+
+    <div class="menu">
+        <label for="menu-recolhivel" class="fechar-menu">X</label>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="historia.html">HISTÓRIA</a></li>
+            <li><a href="menu-cardapio.html">CARDÁPIO</a></li>
+            <li><a href="#">TRABALHE CONOSCO</a></li>
+        </ul>
+    </div>
+
+    <div class="slider">
         <div class="slides">
-            <!--Radio buttons-->
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <!--Radio buttons-->
-
-            <!--imagem dos slides-->
-
             <div class="slide first">
-                <img src="restaurante/historia/2020.jpg" alt="imagem 1" >
+                <img src="foto-buffet/btffet1r.jpg" alt="imagem 1">
+                <input type="radio" name="radio-btn" id="radio1">
             </div>
+
             <div class="slide">
-                <img src="restaurante/historia/2012.jpg" alt="imagem 2" >
-            </div> 
+                <img src="foto-buffet/buffet2r.jpg" alt="imagem 2">
+                <input type="radio" name="radio-btn" id="radio2">
+            </div>
+
             <div class="slide">
-                <img src="restaurante/historia/1980.jpg" alt="imagem 3" >
-            </div> 
+                <img src="foto-buffet/buffet3r.jpg" alt="imagem 3">
+                <input type="radio" name="radio-btn" id="radio3">
+            </div>
+
             <div class="slide">
-                <img src="restaurante/historia/2025.jpg" alt="imagem 4">
-            </div>  
-            <!--slide imagem-->
+                <img src="foto-buffet/bufeet4r.jpg" alt="imagem 4">
+                <input type="radio" name="radio-btn" id="radio4">
+            </div>
 
             <div class="navigation-auto">
                 <div class="auto-btn1"></div>
@@ -39,21 +63,27 @@
                 <div class="auto-btn3"></div>
                 <div class="auto-btn4"></div>
             </div>
-
-
         </div>
 
-       <div class="manual-navigation">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-       </div>
-      
-
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesMenu = document.querySelectorAll('.menu-comida input[type="button"]');
 
-    <script src="script-cardapio.js"></script>
+            botoesMenu.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    botoesMenu.forEach(btn => btn.classList.remove('menu-selecionado'));
+                    this.classList.add('menu-selecionado');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,73 +1,228 @@
-body{
+/* Reset de margens e bordas para todos os elementos */
+* {
   margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 0;
 }
-.slider{
- margin: 0 auto;
- width: 800px;
- height: 400px;
- overflow: hidden;
+
+body {
+  background-color: #f1e8d3;
 }
-.slides{
-  width: 400%;
-  height: 400px;
-  display: flex;
+
+/* Estilos do cabeçalho */
+header {
+  background-color: #5c5c5c;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
-.slides input{
+
+header > h1 > a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Estilos dos títulos H1 */
+h1 {
+  text-align: center;
+  padding: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+}
+
+/* Estilos do título do cardápio */
+#cardapio {
+  background-color: #5c5c5c;
+  color: white;
+  margin: 30px 100px;
+}
+
+/* Estilos do botão selecionado no menu */
+.menu-selecionado {
+  background-color: #deb27e !important;
+  color: #fff !important;
+}
+
+/* Estilos do contêiner do menu de comida */
+.menu-comida {
+  text-align: center;
+  margin: auto;
+}
+
+/* Estilos dos botões do menu */
+.menu1, .menu2, .menu3, .menu4 {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 19px;
+  padding: 15px;
+}
+
+/* Estilos dos títulos H2 */
+h2 {
+  text-align: center;
+  margin: 10px;
+}
+
+/* Estilos dos parágrafos */
+p {
+  font-family: 'Lora', serif;
+  font-size: 21px;
+  line-height: 1.6;
+  color: #666666;
+  margin: 10px;
+  text-align: center;
+}
+
+/* Esconde o checkbox do menu recolhível */
+#menu-recolhivel {
   display: none;
 }
-.slide{
-  width: 25%;
-  position: relative;
+
+/* Estilos do botão de abrir o menu */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #222;
+  z-index: 9999;
 }
-.slide img{
+
+/* Estilos do menu lateral */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -290px;
+  width: 250px;
+  height: 100vh;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 10000;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.menu li {
+  padding: 15px 0;
+  border-bottom: 1px solid #444;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* Estilos do botão de fechar o menu */
+.fechar-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mostrar o menu quando o checkbox estiver marcado */
+#menu-recolhivel:checked + .menu {
+  left: 0;
+}
+
+/* Estilos do slider (carrossel) */
+.slider {
+  height: auto;
   width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
 }
-.manual-navigation{
+
+/* Estilos do contêiner dos slides */
+.slides {
+  height: 400px;
+  width: 400%;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+/* Estilos de cada slide */
+.slide {
+  width: 25%;
+  position: relative; /* Adicionado para posicionamento relativo */
+}
+
+/* Estilos das imagens dos slides */
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos da navegação manual */
+.manual-navigation {
   position: absolute;
   width: 800px;
   margin: -40px;
   display: flex;
   justify-content: center;
 }
-.manual-btn{
+
+.manual-btn {
   border: 2px solid white;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.9s;
 }
-.manual-btn:not(:last-child){
+
+.manual-btn:not(:last-child) {
   margin-right: 40px;
 }
-.manual-btn:hover{
+
+.manual-btn:hover {
   background-color: white;
 }
-#radio1:checked ~ .first{
+
+/* Estilos para o slide ativo (com base no radio button marcado) */
+#radio1:checked ~ .first {
   margin-left: 0;
 }
-#radio2:checked ~ .first{
+
+#radio2:checked ~ .first {
   margin-left: -25%;
 }
-#radio3:checked ~ .first{
+
+#radio3:checked ~ .first {
   margin-left: -50%;
 }
-#radio4:checked ~ .first{
-  margin-left: -80%;
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
 }
-.navigation-auto div{
- border: 2px solid #20a6ff;
- padding: 5px;
- border-radius: 10px;
- cursor: pointer;
- transition: 1s;
+
+/* Estilos da navegação automática */
+.navigation-auto div {
+  border: 2px solid #20a6ff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
 }
-.navigation-auto{
+
+.navigation-auto {
   position: absolute;
   width: 800px;
   margin-top: 360px;
@@ -75,18 +230,55 @@ body{
   display: flex;
   justify-content: center;
 }
-.navigation-auto div:not(:last-child){
+
+.navigation-auto div:not(:last-child) {
   margin-right: 40px;
 }
-#radio1:checked ~ .navigation-auto .auto-btn1{
+
+/* Estilos para o botão de navegação automática ativo */
+#radio1:checked ~ .navigation-auto .auto-btn1 {
   background-color: white;
 }
-#radio2:checked ~ .navigation-auto .auto-btn2{
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
   background-color: white;
 }
-#radio3:checked ~ .navigation-auto .auto-btn3{
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
   background-color: white;
 }
-#radio4:checked ~ .navigation-auto .auto-btn4{
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
   background-color: white;
+}
+
+/* Estilos dos inputs de rádio */
+.slides input[type="radio"] {
+  position: absolute;
+  top: 1%; /* Ajuste a posição vertical */
+  left: 1%; /* Ajuste a posição horizontal */
+  z-index: 10;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .slider {
+      width: 90%;
+  }
+
+  .manual-navigation {
+      width: 100%;
+  }
+
+  .navigation-auto {
+      width: 100%;
+  }
+
+  .slides input[type="radio"] {
+      top: 1%; /* Ajuste a posição vertical */
+      left: 1%; /* Ajuste a posição horizontal */
+  }
 }
