@@ -87,7 +87,9 @@ input, .botao-reservar{
     background-color: #222;
     color: white;
     padding: 20px;
-    transition: left 0.3s ease-in-out;
+    transition: opacity 3s ease-in-out;
+    
+
 }
 
 .menu ul {
