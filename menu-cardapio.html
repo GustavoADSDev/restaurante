@@ -1,55 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.cardapio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.cardapio.css">
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">Restaurante Gourmet</a></h1>
-    </header>
 
-    <h1 id="cardapio">CARDÁPIO</h1>
+  <!-- Cabeçalho -->
+  <header>
+    <h1><a href="index.html">Restaurante Gourmet</a></h1>
+  </header>
 
-    <div class="menu-comida">
-        <a href="#"><input type="button" value="RODÍZIO" class="menu1 menu-selecionado" id="rodizioBtn"></a>
-        <a href="#"><input type="button" value="BUFFET" class="menu2" id="buffetBtn"></a>
-        <a href="#"><input type="button" value="BEBIDAS" class="menu3" id="drinksBtn"></a>
-        <a href="#"><input type="button" value="DRINKS" class="menu4" id="bebidasBtn"></a>
+  <!-- Título do Cardápio -->
+  <h1 id="cardapio">CARDÁPIO</h1>
+
+  <!-- Menu de categorias -->
+  <div class="menu-comida">
+    <a href="#"><input type="button" value="RODÍZIO" class="menu1 menu-selecionado" id="rodizioBtn"></a>
+    <a href="#"><input type="button" value="BUFFET" class="menu2" id="buffetBtn"></a>
+    <a href="#"><input type="button" value="BEBIDAS" class="menu3" id="drinksBtn"></a>
+    <a href="#"><input type="button" value="DRINKS" class="menu4" id="bebidasBtn"></a>
+  </div>
+
+  <!-- Descrição -->
+  <p>Cortes nobres e tradicionais, espaço oriental e buffet completo para você ativar o modo Gourmet</p>
+
+  <!-- Botão para abrir menu lateral -->
+  <label for="menu-recolhivel" class="menu-btn">☰</label>
+  <input type="checkbox" id="menu-recolhivel">
+
+  <!-- Menu lateral -->
+  <div class="menu">
+    <label for="menu-recolhivel" class="fechar-menu">X</label>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="historia.html">HISTÓRIA</a></li>
+      <li><a href="menu-cardapio.html">CARDÁPIO</a></li>
+      <li><a href="#">TRABALHE CONOSCO</a></li>
+    </ul>
+  </div>
+
+  <!-- Área do slide -->
+  <div class="content"> 
+    <div class="slides">
+
+      <!-- Botões dos slides -->
+      <input type="radio" name="slide" id="slide1" checked>
+      <input type="radio" name="slide" id="slide2">
+      <input type="radio" name="slide" id="slide3">
+      <input type="radio" name="slide" id="slide4">
+
+      <!-- Imagens dos slides -->
+      <div class="slide s1">
+        <img src="foto buffer/1.jpeg" alt="imagem 1" loading="lazy">
+      </div>
+
+      <div class="slide">
+        <img src="foto buffer/2.jpeg" alt="imagem 2" loading="lazy">
+      </div>
+
+      <div class="slide">
+        <img src="foto buffer/3.jpeg" alt="imagem 3" loading="lazy">
+      </div>
+
+      <div class="slide">
+        <img src="foto buffer/4.jpeg" alt="imagem 4" loading="lazy">
+      </div>
+
+      <!-- Navegação dos slides -->
+      <div class="navigation">
+        <label class="bar" for="slide1"></label>
+        <label class="bar" for="slide2"></label>
+        <label class="bar" for="slide3"></label>
+        <label class="bar" for="slide4"></label>
+      </div>
     </div>
+  </div>
 
-    <p>Cortes nobres e tradicionais, espaço oriental e buffet completo para você ativar o modo Gourmet</p>
-    <label for="menu-recolhivel" class="menu-btn">☰</label>
-
-    <input type="checkbox" id="menu-recolhivel">
-
-    <div class="menu">
-        <label for="menu-recolhivel" class="fechar-menu">X</label>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="historia.html">HISTÓRIA</a></li>
-            <li><a href="menu-cardapio.html">CARDÁPIO</a></li>
-            <li><a href="#">TRABALHE CONOSCO</a></li>
-        </ul>
-    </div>
-
-   
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const botoesMenu = document.querySelectorAll('.menu-comida input[type="button"]');
-            botoesMenu.forEach(botao => {
-                botao.addEventListener('click', function() {
-                    botoesMenu.forEach(btn => btn.classList.remove('menu-selecionado'));
-                    this.classList.add('menu-selecionado');
-                });
-            });
-        });
-    </script>
-
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid autem quisquam! Error saepe sit autem id earum pariatur nobis. Eveniet dolore quia sunt, architecto qui natus hic obcaecati cum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor assumenda, necessitatibus dolorum ad labore ut. Quae, velit neque laboriosam saepe expedita vel non ad quisquam laborum sed obcaecati voluptates incidunt!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas atque quod sapiente beatae, ipsam quae neque magnam quidem sunt saepe libero explicabo consequuntur! Nostrum, labore eos provident non aspernatur tempore.
+  <!-- Seção de contato -->
+  <section id="contato">
+    <h1>Contato</h1>
+    <p>
+      📞 Telefone: (11) 1234-5678<br>
+      ✉️ Email: contato@restaurantegourmet.com<br>
+      📍 Endereço: Rua dos Sabores, 123 - São Paulo
     </p>
+    <p>🕒 <strong>Horário de Funcionamento: Segunda a Domingo, das 12h às 23h</strong></p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 - Restaurante Gourmet | Todos os direitos reservados</p>
+  </footer>
+
 </body>
 </html>
