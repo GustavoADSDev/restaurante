@@ -20,32 +20,69 @@
             <h1>Sobre nós</h1>
             <p>Bem-vindo ao <strong>Restaurante Gourmet</strong>, onde cada prato é uma experiência única. Nossa missão é oferecer uma experiência gastronômica inesquecível, combinando ingredientes frescos e técnicas culinárias refinadas.</p>
         </section>
+   
+
+        <div class="content"> 
+            <div class="slides">
         
-        <section id="menu">
-           
+              <!-- Botões dos slides -->
+              <input type="radio" name="slide" id="slide1" checked>
+              <input type="radio" name="slide" id="slide2">
+              <input type="radio" name="slide" id="slide3">
+              <input type="radio" name="slide" id="slide4">
         
+              <!-- Imagens dos slides -->
+              <div class="slide s1">
+                <img src="img-restaurante/1.jpeg" alt="imagem 1" loading="lazy">
+              </div>
+        
+              <div class="slide">
+                <img src="img-restaurante/2.jpeg" alt="imagem 2" loading="lazy">
+              </div>
+        
+              <div class="slide">
+                <img src="img-restaurante/3.jpeg" alt="imagem 3" loading="lazy">
+              </div>
+        
+              <div class="slide">
+                <img src="img-restaurante/4.jpeg" alt="imagem 4" loading="lazy">
+              </div>
+        
+              <!-- Navegação dos slides -->
+              <div class="navigation">
+                <label class="bar" for="slide1"></label>
+                <label class="bar" for="slide2"></label>
+                <label class="bar" for="slide3"></label>
+                <label class="bar" for="slide4"></label>
+              </div>
+            </div>
+          </div>
+    
+
+
+
+
+
+
         <section id="reserva">
             <h1>Faça sua Reserva</h1>
           
-            
          <form>
-             <input type="text" placeholder="Seu Nome" required>
-             <input type="number" placeholder="Número de Pessoas" required>
-             <input type="date" required>
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="number" placeholder="Número de Pessoas" required>
+            <input type="date" required>
             <input type="email" placeholder="Seu Email" required>
             <input type="text" placeholder="Comentários adicionais">
-            <button type="submit" class="botao-reservar" id="bnt-reservar" onclick="clicar(event)">Reserva</button>
-            <p id="mensagem-reserva"></p>     
+            <input type="button" value="Reserva" class="botao-reservar">
          </form>
-           
-
+        
         </section>
 
-        <section id="eventos">
-            <h1>Eventos Especiais</h1>
-            <p>Oferecemos espaço para eventos privados e jantares especiais. Entre em contato para mais informações!</p>
-        </section>
-    
+        
+
+           <!-- Botões dos slides -->
+              
+     
         <section id="contato">
             <h1>Contato</h1>
             <p>
@@ -80,4 +117,4 @@
 
     
 </body>
-</html>
+</html>  nao ta aparecmo os slide
