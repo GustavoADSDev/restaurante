@@ -2,7 +2,7 @@
 
 Este é um template moderno e responsivo de site para restaurantes, ideal para estabelecimentos que desejam ter uma presença profissional na internet. O template inclui diversas páginas essenciais e pode ser facilmente personalizado para diferentes estilos de restaurantes.
 
-🔗 **Demonstração online:** [Clique aqui para ver](restaurantegourmet.vercel.app)
+🔗 **Demonstração online:** [Clique aqui para ver](https://restaurantegourmet.vercel.app/)
 
 ## 📄 Páginas incluídas
 
