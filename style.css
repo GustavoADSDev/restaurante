@@ -70,6 +70,7 @@ input, .botao-reservar{
     margin: 50px auto;
     position: relative;
     overflow-x: hidden;
+    z-index: 1;
   }
   
   /* Navegação dos slides (bolinhas/barras) */
@@ -168,6 +169,7 @@ input, .botao-reservar{
     color: white;
     padding: 20px;
     transition: opacity 3s ease-in-out;
+    z-index: 1;
     
 
 }
